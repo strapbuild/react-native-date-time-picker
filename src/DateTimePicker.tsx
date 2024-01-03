@@ -209,33 +209,6 @@ const DateTimePicker = ({
                         flatListProps={flatListProps}
                     />
                 )}
-                <DateList
-                    data={startListData}
-                    itemHeight={itemHeight}
-                    onChange={debouncedHandleChange}
-                    listItemStyle={listItemStyle}
-                    selectedValue={selectedStartItem}
-                    initialScrollIndex={getInitialScrollIndex(
-                        selectedStartItem.current,
-                        startListData
-                    )}
-                    separatorColor={separatorColor}
-                    flatListProps={flatListProps}
-                />
-                <DateList
-                    data={middleListData}
-                    itemHeight={itemHeight}
-                    selectedValue={selectedMiddleItem}
-                    onChange={debouncedHandleChange}
-                    listItemStyle={listItemStyle}
-                    style={styles.middleListStyle}
-                    initialScrollIndex={getInitialScrollIndex(
-                        selectedMiddleItem.current,
-                        middleListData
-                    )}
-                    separatorColor={separatorColor}
-                    flatListProps={flatListProps}
-                />
                 {(mode === 'date' || !is24Hour) && (
                     <DateList
                         data={endListData}
@@ -251,6 +224,34 @@ const DateTimePicker = ({
                         flatListProps={flatListProps}
                     />
                 )}
+                <DateList
+                    data={middleListData}
+                    itemHeight={itemHeight}
+                    selectedValue={selectedMiddleItem}
+                    onChange={debouncedHandleChange}
+                    listItemStyle={listItemStyle}
+                    style={styles.middleListStyle}
+                    initialScrollIndex={getInitialScrollIndex(
+                        selectedMiddleItem.current,
+                        middleListData
+                    )}
+                    separatorColor={separatorColor}
+                    flatListProps={flatListProps}
+                />
+                <DateList
+                    data={startListData}
+                    itemHeight={itemHeight}
+                    onChange={debouncedHandleChange}
+                    listItemStyle={listItemStyle}
+                    selectedValue={selectedStartItem}
+                    initialScrollIndex={getInitialScrollIndex(
+                        selectedStartItem.current,
+                        startListData
+                    )}
+                    separatorColor={separatorColor}
+                    flatListProps={flatListProps}
+                />
+
             </View>
         </View>
     );

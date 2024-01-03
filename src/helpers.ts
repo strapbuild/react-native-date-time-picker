@@ -157,18 +157,18 @@ function getYearArray(startYear: number, endYear: number) {
 
 function getMonthArray() {
     return [
-        'January',
-        'February',
-        'March',
-        'April',
-        'May',
-        'June',
-        'July',
-        'August',
-        'September',
-        'October',
-        'November',
-        'December',
+        '1월', // January
+        '2월', // February
+        '3월', // March
+        '4월', // April
+        '5월', // May
+        '6월', // June
+        '7월', // July
+        '8월', // August
+        '9월', // September
+        '10월', // October
+        '11월', // November
+        '12월', // December
     ].map((month, index) => ({
         value: index,
         text: month,
